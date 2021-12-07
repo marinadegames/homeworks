@@ -1,0 +1,61 @@
+:root{
+    --colorOne: rgba(123, 187, 234, 0.53);
+    --textLight: rgb(83, 88, 223);
+    --nameColor: #7e2ed4;
+}
+
+
+.message {
+
+}
+
+/*===message styles===*/
+.msgBox{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0 0.5rem 0;
+}
+.msgMain{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--colorOne);
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.avatarBox{
+    margin: 0 0.5rem 0 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+.avatar{
+
+}
+.avatar img{
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+}
+
+.msgNameUser{
+    font-weight: 600;
+    color: #7e2ed4;
+}
+.msgText{
+    max-width: 200px;
+}
+.rightBox{
+    color: var(--textLight);
+    font-weight: 600;
+}
+.leftBox{
+    margin: 0 1rem 0 0;
+}
+.rightBox{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
