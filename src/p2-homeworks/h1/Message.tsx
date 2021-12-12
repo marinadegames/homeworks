@@ -16,6 +16,12 @@ function Message(props: typePropsMessage) {
                     <img src={props.avatar} alt='userImg'/>
                 </div>
             </div>
+            <div className={s.triangleMsgDiv}>
+                <div className={s.triangleMsg}>
+
+                </div>
+            </div>
+
             <div className={s.tr}/>
             <div className={s.msgMain}>
                 <div className={s.leftBox}>
