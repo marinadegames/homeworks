@@ -4,4 +4,5 @@
 
 
 ### Completed:
-`01`  
+`01` text message  
+`02` layout affair

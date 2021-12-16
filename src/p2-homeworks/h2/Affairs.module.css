@@ -1,3 +1,76 @@
-.someClass {
+/* custom colors */
+:root {
+    --high-color: #f19191;
+    --low-color: #4d954d;
+    --middle-color: #dfbd34;
+}
+
+
+.affairBox{
+    margin: 0.3rem 0 0.3rem 0;
+    width: 15rem;
+    display: flex;
+}
+.divPriority{
 
 }
+.divAffair{
+    width: 10rem;
+
+}
+
+.affair{
+    width: 200px;
+    margin: 0 1rem 0 1rem;
+}
+
+
+
+/* priority colors */
+.lowPriority{
+    color: var(--low-color);
+}
+.highPriority{
+    color: var(--high-color);
+}
+.middlePriority{
+    color: var(--middle-color);
+}
+
+/* buttons */
+.deleteAffairBtn{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.deleteAffairBtn:hover{
+    background-color: var(--high-color);
+}
+.btnAll{
+    background-color: whitesmoke;
+    margin: 1rem 1rem 0 0;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnHigh{
+    background-color: var(--high-color);
+    margin: 1rem 1rem 0 0;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnMiddle{
+    background-color: var(--middle-color);
+    margin: 1rem 1rem 0 0;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.btnLow{
+    background-color: var(--low-color);
+    margin: 1rem 1rem 0 0;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+ }
