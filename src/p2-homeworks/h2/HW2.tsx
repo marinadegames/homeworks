@@ -2,14 +2,12 @@ import React, {useState} from 'react'
 import Affairs from './Affairs'
 
 // types
-export type AffairPriorityType = 'high' | 'low' | 'middle' //completed!
+export type AffairPriorityType = 'high' | 'low' | 'middle' | 'all' //completed!
 export type AffairType = {
     _id: number,
     name: string,
     priority: AffairPriorityType
 } //completed!
-
-
 export type FilterType = 'all' | AffairPriorityType
 
 // constants
@@ -22,27 +20,44 @@ const defaultAffairs: Array<AffairType> = [ // completed!!!
 ]
 
 // pure helper functions
-export const filterAffairs = (affairs: any, filter: any): any => { // need to fix any
-    if (filter === 'all') return affairs
-    else return // need to fix
+export const filterAffairs = (affairs: Array<AffairType>, filter: AffairPriorityType): Array<AffairType> => { // completed!!!
+
+
+    // pattern early return
+    if (filter === 'high') {
+        return affairs.filter((a: AffairType) => a.priority === 'high')
+    }
+
+    if (filter === 'low') {
+        return affairs.filter((a: AffairType) => a.priority === 'low')
+    }
+
+    if (filter === 'middle') {
+        return affairs.filter((a: AffairType) => a.priority === 'middle')
+    }
+
+    return affairs // if ALL
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-    return // need to fix
+
+export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // completed!!!
+    return affairs.filter((a: AffairType) => a._id !== _id)
+    // need to fix
 }
 
 function HW2() {
-    const [affairs, setAffairs] = useState<any>(defaultAffairs) // need to fix any
+    const [affairs, setAffairs] = useState<Array<AffairType>>(defaultAffairs) //  completed!!!
     const [filter, setFilter] = useState<FilterType>('all')
 
     const filteredAffairs = filterAffairs(affairs, filter)
-    const deleteAffairCallback = (_id: any) => setAffairs(deleteAffair(affairs, _id)) // need to fix any
+
+    const deleteAffairCallback = (_id: number) => setAffairs(deleteAffair(affairs, _id)) //  completed!!!
 
     return (
         <div>
             <hr/>
             homeworks 2
 
-            {/*should work (должно работать)*/}
+            {/* completed!!!*/}
             <Affairs
                 data={filteredAffairs}
                 setFilter={setFilter}

@@ -5,18 +5,20 @@ import s from './Affairs.module.css'
 // types
 type AffairPropsType = {
     // key не нужно типизировать
-    affair: any // need to fix any
-    priority: any
-    deleteAffairCallback: any // need to fix any
+    affair: string // completed
+    priority: string
+    id: number
+    deleteAffairCallback: (id: number) => void // complete!
 }
 
 //components
 function Affair(props: AffairPropsType) {
-    const deleteCallback = () => {
+    const deleteCallback = (id: number) => {
+        props.deleteAffairCallback(id)
     }// need to fix
 
+    //colors
     let colorPriority;
-
     if (props.priority === 'low'){
         colorPriority = s.lowPriority
     }else if (props.priority === 'high'){
@@ -26,9 +28,9 @@ function Affair(props: AffairPropsType) {
     }
 
     return (
-        <div className={s.affairBox}>
+        <div className={s.affairBox} >
 
-            <button onClick={deleteCallback} className={s.deleteAffairBtn}>X</button>
+            <button onClick={() => deleteCallback(props.id) } className={s.deleteAffairBtn}>X</button>
 
             <div className={s.divAffair}>
                 <span className={s.affair}>
