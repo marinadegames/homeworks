@@ -1,7 +1,7 @@
 :root {
     --colorOne: rgba(123, 187, 234, 0.53);
-    --textLight: rgb(83, 88, 223);
-    --nameColor: #7e2ed4;
+    --textLight: rgb(217, 217, 217);
+    --nameColor: #bee9ff;
 }
 
 
@@ -48,7 +48,7 @@
 
 .msgNameUser {
     font-weight: 600;
-    color: #7e2ed4;
+    color: var(--nameColor)
 }
 
 .msgText {

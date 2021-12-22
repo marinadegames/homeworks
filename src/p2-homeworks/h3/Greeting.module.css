@@ -1,7 +1,20 @@
 .someClass {
 
 }
-
+.attention{
+    font-size: 10px;
+    height: 20px;
+}
 .error {
-    border: 1px solid red;
+    border-radius: 0.3rem;
+    border: 1px solid #ab2f2f;
+    background-color: #d49191;
+    padding: 0.2rem;
+}
+.btnAddName {
+    margin: 0 1rem 0 1rem;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    background-color: var(--low-color);
+    border-radius: 0.3rem;
 }
