@@ -1,0 +1,32 @@
+.headerMenu{
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+    transition: ease-in-out 0.2s;
+    cursor: pointer;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.menuTitle {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.menuMainOpen{
+    display: flex;
+    flex-direction: column;
+}
+.menuMainClose{
+    display: none;
+}
+.itemMenu{
+    padding: 0.7rem 0;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #222222;
+    text-decoration: none;
+}
+.itemMenu:hover{
+    text-decoration: underline;
+}
+
