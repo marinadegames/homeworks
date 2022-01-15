@@ -1,16 +1,4 @@
-.superInput {
-    border: 2px solid red;
-}
-
-.errorInput {
-    outline: none;
-    border-radius: 0.3rem;
-    height: 1.5rem;
-    padding: 0 0 0 0.5rem;
-    border: 1px solid #ea5656;
-    background: #f59a9a;
-}
-.justInput {
+.spanClassName{
     outline: none;
     /*border-radius: 0.3rem;*/
     height: 1.5rem;
@@ -24,10 +12,5 @@
     border-radius: 5px;
     padding: 0.3rem;
     width: 30%;
-}
-.error {
-    color: #ff9595;
-}
-.errorTextBox{
-    /*height: 2rem;*/
+
 }
