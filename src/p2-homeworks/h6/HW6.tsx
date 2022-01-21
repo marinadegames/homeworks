@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
 import SuperButton from '../h4/common/c2-SuperButton/SuperButton'
-import {restoreState, saveState} from './localStorage/localStorage'
-
+import {saveState} from './localStorage/localStorage'
+import s from './SuperButtonClass.module.css'
 
 
 
@@ -31,7 +31,7 @@ function HW6() {
                     spanProps={{children: value ? undefined : 'enter text...'}}
                 />
             </div>
-            <SuperButton onClick={save}>save</SuperButton>
+            <SuperButton onClick={save} className={s.SuperButtonClass}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
 
             <hr/>

@@ -2,7 +2,7 @@ import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState}
 import SuperInputText from '../../../h4/common/c1-SuperInputText/SuperInputText'
 import s from './InputStyles.module.css'
 
-const editPen =<img src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/32/000000/external-edit-miscellaneous-kiranshastry-lineal-color-kiranshastry.png"/>
+const editPen = <img alt={'pen'} src="https://img.icons8.com/external-kiranshastry-lineal-color-kiranshastry/32/000000/external-edit-miscellaneous-kiranshastry-lineal-color-kiranshastry.png"/>
 
 
 // тип пропсов обычного инпута
@@ -44,7 +44,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
 
         onBlur && onBlur(e)
     }
-    const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
+    const onClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
         setEditMode(true) // включить editMode при двойном клике
 
         onDoubleClick && onDoubleClick(e)
@@ -65,7 +65,7 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
                     />
                 ) : (
                     <span
-                        onDoubleClick={onDoubleClickCallBack}
+                        onClick={onClickCallBack}
                         className={s.spanClassName}
 
                         {...restSpanProps}

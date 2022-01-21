@@ -1,0 +1,14 @@
+.SuperSelectStyle {
+    padding: 0.2rem 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 2px solid white;
+    transition: 0.2s;
+}
+
+.SuperSelectStyle:hover{
+    background-color: #4187ab;
+    color: white;
+
+}
+
