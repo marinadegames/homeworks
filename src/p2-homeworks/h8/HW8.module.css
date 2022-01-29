@@ -1,0 +1,5 @@
+.peopleAgeAndName {
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+}
