@@ -2,16 +2,16 @@ import React, {useState} from 'react'
 import Affairs from './Affairs'
 
 // types
-export type AffairPriorityType = 'high' | 'low' | 'middle' | 'all' //completed!
+export type AffairPriorityType = 'high' | 'low' | 'middle' | 'all'
 export type AffairType = {
     _id: number,
     name: string,
     priority: AffairPriorityType
-} //completed!
+}
 export type FilterType = 'all' | AffairPriorityType
 
-// constants
-const defaultAffairs: Array<AffairType> = [ // completed!!!
+
+const defaultAffairs: Array<AffairType> = [
     {_id: 1, name: 'React', priority: 'high'},
     {_id: 2, name: 'anime', priority: 'low'},
     {_id: 3, name: 'games', priority: 'low'},
@@ -19,29 +19,14 @@ const defaultAffairs: Array<AffairType> = [ // completed!!!
     {_id: 5, name: 'html & css', priority: 'middle'},
 ]
 
-// pure helper functions
 export const filterAffairs = (affairs: Array<AffairType>, filter: AffairPriorityType): Array<AffairType> => { // completed!!!
-
-
-    // pattern early return
-    if (filter === 'high') {
-        return affairs.filter((a: AffairType) => a.priority === 'high')
-    }
-
-    if (filter === 'low') {
-        return affairs.filter((a: AffairType) => a.priority === 'low')
-    }
-
-    if (filter === 'middle') {
-        return affairs.filter((a: AffairType) => a.priority === 'middle')
-    }
-
-    return affairs // if ALL
+    if (filter === 'high') return affairs.filter((a: AffairType) => a.priority === 'high')
+    if (filter === 'low') return affairs.filter((a: AffairType) => a.priority === 'low')
+    if (filter === 'middle') return affairs.filter((a: AffairType) => a.priority === 'middle')
+    return affairs
 }
-
 export const deleteAffair = (affairs: Array<AffairType>, _id: number): Array<AffairType> => { // completed!!!
     return affairs.filter((a: AffairType) => a._id !== _id)
-    // need to fix
 }
 
 function HW2() {
@@ -54,8 +39,7 @@ function HW2() {
 
     return (
         <div>
-            <hr/>
-            homeworks 2
+            <b>homework 2</b>
 
             {/* completed!!!*/}
             <Affairs
@@ -63,10 +47,6 @@ function HW2() {
                 setFilter={setFilter}
                 deleteAffairCallback={deleteAffairCallback}
             />
-
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeAffairs/>*/}
             <hr/>
         </div>
     )

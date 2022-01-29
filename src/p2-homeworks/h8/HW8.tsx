@@ -47,7 +47,7 @@ function HW8() {
 
     return (
         <div>
-            <b>homeworks 8</b>
+            <b>homework 8</b>
             {finalPeople}
 
             <SuperButton style={{margin:'0.5rem 0.5rem 0 0'}} onClick={sortUp}>sort up</SuperButton>

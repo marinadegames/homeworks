@@ -19,8 +19,7 @@ function HW6() {
 
     return (
         <div>
-            <hr/>
-            homeworks 6
+            <b>homework 6</b>
 
             {/*should work (должно работать)*/}
             <div>
@@ -34,9 +33,7 @@ function HW6() {
             <SuperButton onClick={save} className={s.SuperButtonClass}>save</SuperButton>
             <SuperButton onClick={restore}>restore</SuperButton>
 
-            <hr/>
-            {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeSuperEditableSpan/>*/}
+
             <hr/>
         </div>
     )
