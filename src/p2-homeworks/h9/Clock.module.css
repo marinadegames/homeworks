@@ -1,0 +1,12 @@
+.stringTime {
+    /*padding: 0 0 2rem 0;*/
+    position: inherit;
+    cursor: pointer;
+}
+.stringDate {
+    position: absolute;
+    cursor: pointer;
+}
+.btnGroupForTimeAndDate{
+    margin: 1.5rem 0 0 0;
+}

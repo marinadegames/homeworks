@@ -20,10 +20,8 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
         ...restProps// все остальные пропсы попадут в объект restProps
     }
 ) => {
-    console.log(onChange)
     const onChangeCallback = (e: ChangeEvent<HTMLInputElement>) => {
         // сделайте так чтоб работал onChange и onChangeChecked
-        console.log(e)
         onChange && onChange(e)
         onChangeChecked && onChangeChecked(e.currentTarget.checked)
         if(onChange !== undefined){

@@ -13,8 +13,6 @@ export type UserType = {
 function HW3() {
     const [users, setUsers] = useState<UserType[]>([])
 
-    console.log(users)
-
     const addUserCallback = (name: string) => {
         let newUser = {_id: v1(), name: name}
         let newUsers = [newUser, ...users]
