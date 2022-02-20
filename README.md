@@ -16,3 +16,5 @@
 ✒️ `07` - xyz  
 📝 `08` - added `reducers`  
 ⏱️ `09` - added `clock`  
+🔃️ `10` - added `lodaing`  
+🔵️ `11` - added `range` and `double range`  

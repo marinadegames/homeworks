@@ -1,37 +1,49 @@
-import React, {useState} from 'react'
+import React from 'react'
 import SuperRange from './common/c7-SuperRange/SuperRange'
-import SuperDoubleRange from './common/c8-SuperDoubleRange/SuperDoubleRange'
+import SuperDoubleRange from "./common/c8-SuperDoubleRange/SuperDoubleRange";
 
 function HW11() {
-    const [value1, setValue1] = useState(0)
-    const [value2, setValue2] = useState(100)
+
+    const [values, setValues] = React.useState<number[]>([20, 37]);
+
+    const onChangeRange = (newValue: number) => {
+        console.log(values)
+        setValues([newValue, values[1]])
+    }
+    const onChangeDoubleRange = (newValue: number[]) => {
+        console.log(newValue)
+        setValues(newValue)
+    }
 
     return (
         <div>
-            <hr/>
             homeworks 11
-
-            {/*should work (должно работать)*/}
             <div>
-                <span>{value1}</span>
+
                 <SuperRange
-                    // сделать так чтоб value1 изменялось
+                    onChangeRange={onChangeRange}
+                    value={values[0]}
                 />
+                <span>{values[0]}</span>
             </div>
 
             <div>
-                <span>{value1}</span>
+
                 <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
+                    onChangeRange={onChangeRange}
+                    values={values}
+                    onChangeDoubleRange={onChangeDoubleRange}
                 />
-                <span>{value2}</span>
+                <br/>
+                <span>MIN: {values[0]}</span>
+                <br/>
+                <span>MAX: {values[1]}</span>
             </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
             {/*<AlternativeSuperRange/>*/}
             {/*<AlternativeSuperDoubleRange/>*/}
-            <hr/>
         </div>
     )
 }
