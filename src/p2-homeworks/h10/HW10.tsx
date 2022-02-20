@@ -15,38 +15,40 @@ function HW10() {
 
     const setLoadingHandler = () => {
         dispatch(loadingAC('DOWNLOAD COMPLETE!'))
+        setTimeout(() => {
+            dispatch(loadingAC(''))
+        }, 5000)
         setLoading(true)
-        setTimeout( () => {
+        setTimeout(() => {
             setLoading(false)
-        },1500)
+        }, 1500)
         console.log('loading...')
     };
 
 
-
     return (
 
-            <div>
+        <div>
 
-                homeworks 10
+            homeworks 10
 
-                {loading
-                    ? (
-                        <div className={s.spinner}><small> loading... </small></div>
+            {loading
+                ? (
+                    <div className={s.spinner}><small> loading... </small></div>
 
-                    ) : (
-                        <div>
-                            <SuperButton onClick={setLoadingHandler}>set loading...</SuperButton>
-                            <small className={s.downloadTitle}>{title.text}</small>
-                        </div>
-                    )
-                }
+                ) : (
+                    <div>
+                        <SuperButton onClick={setLoadingHandler}>set loading...</SuperButton>
+                        <small className={s.downloadTitle}>{title.text}</small>
+                    </div>
+                )
+            }
 
-                <hr/>
-                {/*для личного творчества, могу проверить*/}
-                {/*<Alternative/>*/}
+            <hr/>
+            {/*для личного творчества, могу проверить*/}
+            {/*<Alternative/>*/}
 
-            </div>
+        </div>
     )
 }
 
