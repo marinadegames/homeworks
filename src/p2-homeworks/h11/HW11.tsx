@@ -7,11 +7,9 @@ function HW11() {
     const [values, setValues] = React.useState<number[]>([20, 37]);
 
     const onChangeRange = (newValue: number) => {
-        console.log(values)
         setValues([newValue, values[1]])
     }
     const onChangeDoubleRange = (newValue: number[]) => {
-        console.log(newValue)
         setValues(newValue)
     }
 
