@@ -1,9 +1,11 @@
-# My HOMEWORK    
+# My HOMEWORK
+
 `it-incubator`
 
-
 ### `Completed:` ###
-#### PRE-JUNIOR:  
+
+#### PRE-JUNIOR:
+
 ✅ `01` - text message  
 📌 `02` - affairs | `filter` and `hooks`  
 🔢 `03` - input add  
@@ -18,3 +20,4 @@
 ⏱️ `09` - added `clock`  
 🔃️ `10` - added `lodaing`  
 🔵️ `11` - added `range` and `double range`  
+🎨 `12` - added `change theme!` 

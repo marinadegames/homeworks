@@ -1,5 +1,20 @@
+.container {
+
+    height: 200px;
+    border: 3px solid white;
+}
+.title {
+    padding: 20px;
+    margin: 0;
+}
+.boxSelectors {
+    padding: 20px;
+    font-size: 25px;
+}
+
 .dark {
-    background: dimgrey;
+    height: 100%;
+    background: #2e2e2e;
 }
 
 .dark-text {
@@ -8,6 +23,7 @@
 
 .red {
     background: lightcoral;
+    height: 100%;
 }
 
 .red-text {
@@ -15,8 +31,11 @@
 }
 
 .some {
-    background: lightgreen;
+    height: 100%;
+    background: var(--colorOne);
+    color: white;
 }
+
 
 .some-text {
     color: darkslateblue;
