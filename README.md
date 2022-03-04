@@ -20,4 +20,8 @@
 ⏱️ `09` - added `clock`  
 🔃️ `10` - added `lodaing`  
 🔵️ `11` - added `range` and `double range`  
-🎨 `12` - added `change theme!` 
+🎨 `12` - added `change theme!`
+
+#### JUNIOR+:
+
+✅ `13` - added `request API`
