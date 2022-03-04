@@ -23,6 +23,7 @@ export const Request = () => {
                 console.log({...error});
                 console.log(error.response ? error.response.data.errorText : error.message);
                 setAnswer(error.response.data.errorText)
+                setIsChecked(false)
             })
     }
 
